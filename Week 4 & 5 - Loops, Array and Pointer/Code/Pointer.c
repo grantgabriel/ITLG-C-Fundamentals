@@ -21,3 +21,13 @@ int main() {
 
     return 0;
 }
+
+/*
+int fungsiA() {
+  int a, int b;
+  return a;
+}
+
+
+
+*/
