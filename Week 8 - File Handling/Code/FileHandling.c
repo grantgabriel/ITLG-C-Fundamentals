@@ -17,10 +17,6 @@ int main() {
 
     // Membuka file dalam mode membaca (read mode)
     file = fopen(filename, "r");
-    if (file == NULL) {
-        printf("Gagal membuka file untuk membaca.\n");
-        return 1;
-    }
 
     // Membaca dan menampilkan data dari file
     printf("Isi dari file %s:\n\n", filename);
@@ -30,24 +26,21 @@ int main() {
     fclose(file);
 
     // // Membuka file dalam mode menambahkan (append mode)
-    // file = fopen(filename, "a");
-    // if (file == NULL) {
-    //     printf("Gagal membuka file untuk menambahkan.\n");
-    //     return 1;
-    // }
+    file = fopen(filename, "a");
 
-    // // Menambahkan data ke dalam file
-    // fprintf(file, "Menambahkan baris baru di akhir file.\n");
-    // fclose(file);
-    // printf("Data tambahan telah ditulis ke dalam file %s\n\n", filename);
+    // Menambahkan data ke dalam file
+    fprintf(file, "Menambahkan baris baru di akhir file.\n");
+    fclose(file);
+    printf("\nData tambahan telah ditulis ke dalam file %s\n\n", filename);
 
-    // // Membaca dan menampilkan data dari file
-    // file = fopen(filename, "r");
-    // printf("Isi dari file %s:\n\n", filename);
-    // while (fgets(text, sizeof(text), file) != NULL) {
-    //     printf("%s", text);
-    // }
-    // fclose(file);
+
+    // Membaca dan menampilkan data dari file
+    file = fopen(filename, "r");
+    printf("Isi dari file %s:\n\n", filename);
+    while (fgets(text, sizeof(text), file) != NULL) {
+        printf("%s", text);
+    }
+    fclose(file);
 
     return 0;
 }

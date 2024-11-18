@@ -1,0 +1,3 @@
+Contoh penulisan teks ke dalam file.
+Ini adalah baris kedua dalam file.
+Menambahkan baris baru di akhir file.
